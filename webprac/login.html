@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Log In</h2>
+            <form id="login-form" class="form">
+
+                <div class="form-feild">
+                    <label for="username1">UserName:</label><br>
+                    <input type="text" id="username1" placeholder="Enter UserName">
+                    <small>Error Message</small>
+                </div>
+
+                <div class="form-feild">
+                    <label for="password1">Password:</label><br>
+                    <input type="password" id="password1" placeholder="Enter password">
+                    <small>Error Message </small>
+                </div>
+
+                <button id="formbutton1" class="formbutton1">login</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        const username1 = document.getElementById("username1");
+        const password1 = document.getElementById("password1");
+        const login = document.getElementById("formbutton1");
+
+
+        function getFieldName(input) {
+            return input.id.charAt(0) + input.id.slice(1);
+        }
+
+        function checkRequired(inputArr) {
+            inputArr.forEach(function (input) {
+                if (input.value.trim().length == 0) {
+                    showError(input, `${getFieldName(input)} is required`);
+                } else {
+                    showSuccess(input);
+                }
+            });
+
+        }
+
+        function showError(input, message) {
+            // input.style.borderColor = "red";
+            const formControl = input.parentElement;
+            formControl.className = "form-feild error";
+            const small = formControl.querySelector("small");
+            small.innerText = message;
+        }
+
+        function showSuccess(input) {
+            const formControl = input.parentElement;
+            formControl.className = "form-feild success";
+        }
+
+        console.log('heklo');
+
+
+        login.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log(username1, password1);
+            checkRequired([username1, password1]);
+            loginHandle();
+        });
+
+        function loginHandle() {
+            const username1 = document.getElementById("username1").value;
+            const password1 = document.getElementById("password1").value;
+            console.log(username1,password1);
+
+            
+            const username = localStorage.getItem("username")
+            const password = localStorage.getItem("password")
+
+           
+
+            if (username === username1 && password === password1) {
+                alert("Login successfull");
+                window.location.href = "assignment.html"
+                
+            } else {
+                alert("invalid Username and password");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

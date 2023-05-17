@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.flex-conatiner {
+    background-color: orange;
+    color: white;
+    display: flex;
+    align-items: stretch;
+    padding: 15px;
+    width: 100%;
+
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin: 0 auto;
+
+}
+
+.logo {
+    width: 120px;
+    margin-top: 8px;
+}
+
+nav .logo {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li a {
+    color: black;
+    display: block;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: orange
+}
+
+nav ul li a.active {
+    background-color: orange;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+    margin-top: 25px;
+}
+
+.hamburger:hover {
+    background-color: rgb(205, 201, 201);
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: black;
+}
+
+.content img {
+    background-position: center;
+   width: 100%;
+    background-attachment: fixed;
+    background-color: black;
+
+}
+
+ .mob_content{
+     background-color:rgb(31, 31, 77); 
+     height: 100%;
+     width: 100%;
+  
+}
+
+.react_logo {
+   justify-content: center;
+    display: flex;
+    color: white;
+   
+}
+.react_logo h4{
+    margin-top: 10px;
+    padding: 8px;
+    
+}
+
+.react_logo .main_head h3 h2 p{
+    display: block;
+}
+
+.main_head{
+    color: white;
+    padding: 20px;
+    
+}
+.main_head h3,h2,p{
+    text-align: center;
+    padding: 5px;
+}
+
+.main_head p{
+    font-size: large;
+}
+
+.main_head .batch p{
+padding: 0;
+margin-top:10px;
+background-color: white;
+border-radius: 5px;
+color: black;
+} 
+
+
+@media only screen and (max-width: 1100px) {
+    .flex-conatiner {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        left: -300;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100%;
+        background-color: rgb(249, 247, 243);
+        box-shadow: 2px 0 20px 0 black;
+    }
+
+    #nav_check:checked ~ nav {
+        left: 0;
+    }
+
+    nav .logo {
+        display: block;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        margin-left: 80px;
+
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mob_content{
+        display: contents;
+    }
+    }
+   
+
+
+
+
+
