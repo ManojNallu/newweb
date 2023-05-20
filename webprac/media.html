@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    <title>Responsive Web Design</title>
+    <script src="https://kit.fontawesome.com/323842255e.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .flex-conatiner ul {
+            background-color: orangered;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .logo {
+            text-align: center;
+            color: white;
+
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+
+        .menu ul li {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+        .menu ul li a:hover {
+            background-color: orange;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .menu ul li a.active{
+            background-color: rgb(241, 173, 35);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .content {
+            background-color: rgb(15, 15, 60);
+        }
+
+        .right{
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+
+
+        @media only screen and (max-device-width:480px) {
+            .flex-conatiner ul {
+                background-color: orangered;
+                display: none;
+            }
+
+            .logo {
+                background-color: rgb(75, 142, 201);
+                height: 10%;
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo img {
+                margin-top: 20px;
+                
+            }
+
+            .menu ul {
+                display: flex;
+                flex-direction: column;
+                align-content: start;
+                background-color: rgb(255, 255, 255);
+                border-radius: 5px;
+                margin: 0;
+                width: 20%
+            }
+
+            .menu ul li {
+                padding-top: 80px;
+                font-weight: bold;
+                font-size:x-large;
+            }
+
+            .menu,
+            .content {
+                display: flex;
+                
+            }
+            .content2{
+                width: 90%;
+                padding: 40px;
+                background-color: rgb(223, 232, 232);
+                border-radius: 40px;
+                margin-top: 20px;
+                text-align: center;
+                margin-left: 50px;
+                font-size: xx-large;
+            }
+            .content3{
+                width: 90%;
+                padding: 40px;
+                background-color: rgb(223, 232, 232);
+                border-radius: 40px;
+                margin-top: 20px;
+                text-align: center;
+                margin-left: 50px;
+                font-size: xx-large;
+            }
+            .content4{
+                width: 90%;
+                padding: 40px;
+                background-color: rgb(223, 232, 232);
+                border-radius: 40px;
+                margin-top: 20px;
+                text-align: center;
+                margin-left: 50px;
+                font-size: xx-large;
+            }
+
+            .footer{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                font-size: xx-large;
+            }
+            
+            
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-conatiner">
+        <ul>
+            <li> Admission Going On, Hurry To Enroll Now</li>
+            <li><i class="fa-brands fa-whatsapp"></i> Whatsapp : +91 7396151228</li>
+            <li><i class="fa-regular fa-envelope"></i> support@webla.in</li>
+        </ul>
+    </div>
+
+    <div class="logo">
+        <img src="wbla.png" width="150px">
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="" class="active">HOME</a>
+            </li>
+            <li>
+                <a href="">COURSES</a>
+            </li>
+            <li>
+                <a href="">DEMOCLASS</a>
+            </li>
+            <li>
+                <a href="">WORKSHOPS</a>
+            </li>
+            <li>
+                <a href="">ABOUT</a>
+            </li>
+            <li>
+                <a href="">CONTACT</a>
+            </li>
+        </ul>
+        <div class="content">
+            <img src="react.png" width="100%">
+        </div>
+
+    </div>
+
+    
+    <div class="content2">
+       <h3><span style="color: orange;"><i class="fa-solid fa-circle-check"></i></span> Real Time Practices</h3>
+    </div>
+    <div class="content3">
+        <h3><span style="color: orange;"><i class="fa-solid fa-circle-check"></i></span> Friendly Teaching</h3>
+     </div>
+     <div class="content4">
+        <h3><span style="color: orange;"><i class="fa-solid fa-circle-check"></i></span> Affordable Prices</h3>
+     </div>
+
+     <div class="footer">
+        <p>Terms of use | Privacy Policy</p>
+        <p>2023 © All rights reserved by WebLA</p>
+     </div>
+    
+
+
+
+    <!-- <div class="side" hidden>
+                 <p><i class="fa-solid fa-circle-check"></i>Real Time Practices</p>
+                 <p><i class="fa-solid fa-circle-check"></i>Real Time Practices</p>
+                 <p><i class="fa-solid fa-circle-check"></i>Real Time Practices</p>
+            </div>
+            
+        </div> -->
+
+</body>
+
+</html>

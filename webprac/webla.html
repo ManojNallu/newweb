@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>webla Home page using Flex box</title>
+    <script src="https://kit.fontawesome.com/323842255e.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .flex-conatiner {
+            background-color: orange;
+            color: white;
+            display: flex;
+            align-items: stretch;
+            padding: 15px;
+            width: 100%;
+
+        }
+
+        .flex-conatiner2 {
+            border-bottom: 1px solid;
+            display: flex;
+            align-items: stretch;
+            padding: 15px;
+            width: 100%;
+            font-family: Lucida Console;
+        }
+
+        .dropdown {
+            position: relative;
+            padding-top: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            display: block;
+            z-index: 1;
+            border-radius: 6px;
+            margin-top: 27px;
+        }
+
+        .dropdown-content ul {
+            list-style: none;
+        }
+
+        .dropdown-content ul li {
+            padding: 7px;
+            width: 160px;
+        }
+
+        
+        @media only screen and (min-device-width: 480px) {
+            
+        
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-conatiner">
+        <div style="flex-grow: 8; margin-left:35px;">Admission Going On, Hurry To Enroll Now</div>
+        <div style="flex-grow: 1;"><i class="fa-brands fa-whatsapp"></i> Whatsapp : +91 7396151228</div>
+        <div style="flex-grow: 1;"><i class="fa-regular fa-envelope"></i> support@webla.in</div>
+    </div>
+    <div class="flex-conatiner2">
+        <div class="logo" style="flex-grow: 4; margin-left:35px;"><img src="wbla.png" width="130px"></div>
+        <div style="flex-grow: 1; padding-top: 20px;">HOME</div>
+
+        <div class="dropdown" style="flex-grow: 1;padding-top: 20px;">COURSES <span><i
+                    class="fa-solid fa-chevron-down fa-xs"></i></span>
+            <div class="dropdown-content">
+                <ul>
+                    <li>React Js</li>
+                    <li>Angular</li>
+                    <li>MERN Stack</li>
+                    <li>Mean Stack</li>
+                    <li>Python & Django</li>
+                    <li>Devops</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="flex-grow: 1;padding-top: 20px;">DEMO CLASS</div>
+        <div style="flex-grow: 1;padding-top: 20px;">WORKSHOPS</div>
+        <div style="flex-grow: 1;padding-top: 20px;">ABOUT</div>
+        <div style="flex-grow: 1;padding-top: 20px;">CONTACT</div>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </div>
+
+    <script src="loops.js">
+
+    </script>
+
+
+</body>
+
+</html>
