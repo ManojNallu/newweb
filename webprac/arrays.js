@@ -382,21 +382,21 @@ console.log(intersectionOfNumbers(arr1, arr2));
 
 function unionofArray(ary1, ary2) {
 
-   
+
 
     let union = [];
 
-    for(let i =0; i < ary1.length; i++){
-        if(!ary2.includes(ary1[i])){
+    for (let i = 0; i < ary1.length; i++) {
+        if (!ary2.includes(ary1[i])) {
             union.push(ary1[i]);
-            
+
         }
 
     }
-    for(let i =0; i < ary2.length; i++){
-        if(!ary1.includes(ary2[i])){
+    for (let i = 0; i < ary2.length; i++) {
+        if (!ary1.includes(ary2[i])) {
             union.push(ary2[i]);
-           
+
         }
 
     }
@@ -408,9 +408,147 @@ let ary2 = ['d', 'e', 'f'];
 console.log(unionofArray(ary1, ary2));
 
 
- //   for (let i = 0; i < ary1.length; i++) {
-    //     if (!ary1[i].includes(ary2)) {
-    //         ary2.push(ary1[i])
-    //     }
-    // }
-    // return ary2;
+//   for (let i = 0; i < ary1.length; i++) {
+//     if (!ary1[i].includes(ary2)) {
+//         ary2.push(ary1[i])
+//     }
+// }
+// return ary
+
+
+
+// console.log(student1.getName());
+
+function getUserData() {
+    let promise = fetch("https://reqres.in/api/users?page-2");
+
+    promise.then((data) => {
+
+        let dataPromise = data.json();
+
+        dataPromise.then((jsonData) => {
+            showData(jsonData);
+        })
+
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+
+
+function showData(jsonData) {
+    let user_row = document.getElementById("user_row");
+
+    jsonData.data.forEach(elem => {
+        let col = document.createElement("div");
+        col.className = "col-3";
+
+        let card = document.createElement("div");
+        card.className = "card";
+
+        let card_header = document.createElement("div");
+        card_header.className = "card-header";
+
+
+        let card_body = document.createElement("div");
+        card_body.className = "card-body";
+
+
+        let img = document.createElement('img');
+        img.src = elem.avatar;
+
+
+        let card_footer = document.createElement("div");
+        card_footer.className = "card-footer";
+
+
+        card_header.innerText = elem.first_name;
+        card_footer.innerText = elem.email;
+
+
+        card.appendChild(card_header);
+
+        card.appendChild(card_body);
+
+        card_body.appendChild(img);
+
+        card.appendChild(card_footer);
+
+        col.appendChild(card);
+
+        user_row.appendChild(col);
+
+    });
+
+}
+//=================
+const test1 = str => {
+    console.log("manoj")
+}
+test1();
+
+
+let myprom = new Promise((resolve, reject) => {
+
+    // Simulating an asynchronous task
+
+    setTimeout(() => {
+        let result = Math.random();
+
+        if (result > 0.5) {
+            resolve(result);
+        } else {
+            reject(new Error("promise rjected"));
+        }
+    }, 1000);
+});
+
+myprom.then(result => {
+    console.log("promise fullfilled ", result);
+}).catch(result => {
+    console.log("promise not unfilled", result);
+})
+
+
+const test2 = str => {
+    console.log("manoj")
+}
+test2();
+//===========================================
+
+
+const fetchUser = id => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let user = { id, user_name: "manoj" };
+            resolve(user);
+        }, 1000);
+    });
+}
+
+const fetchUser2 = userId => {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let user2 = { userId, user_name: "siri" };
+            resolve(user2);
+        }, 1000);
+
+    });
+
+}
+
+const userId = 1;
+
+Promise.all([fetchUser(userId), fetchUser2(userId)])
+
+    .then(([user, user2]) => {
+        console.log("user", user);
+        console.log("user2", user2);
+    }).catch(() => {
+        console.log("error");
+    });
+
+
+
+    
